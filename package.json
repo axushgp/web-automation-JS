@@ -1,0 +1,41 @@
+{
+  "name": "web-automation-js",
+  "version": "1.0.0",
+  "description": "Building an automation project using Playwright and Puppeteer which skips past the Cloudfare anti-bot verification easily.",
+  "main": "index.js",
+  "scripts": {
+    "start": "node examples/puppeteer-example.js",
+    "example:puppeteer": "node examples/puppeteer-example.js",
+    "example:playwright": "node examples/playwright-example.js",
+    "install-browsers": "npx playwright install",
+    "test": "node test/unit-test.js",
+    "test:unit": "node test/unit-test.js",
+    "test:browser": "node test/basic-test.js"
+  },
+  "keywords": [
+    "automation",
+    "puppeteer",
+    "playwright",
+    "cloudflare",
+    "anti-bot",
+    "stealth",
+    "web-scraping",
+    "browser-automation"
+  ],
+  "author": "Web Automation JS",
+  "license": "MIT",
+  "engines": {
+    "node": ">=14.0.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/axushgp/web-automation-JS.git"
+  },
+  "dependencies": {
+    "playwright": "^1.55.0",
+    "puppeteer": "^24.19.0",
+    "puppeteer-extra": "^3.3.6",
+    "puppeteer-extra-plugin-stealth": "^2.11.2",
+    "user-agents": "^1.1.657"
+  }
+}
