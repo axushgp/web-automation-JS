@@ -11,7 +11,7 @@ chromium.use(StealthPlugin());
   const page = await browser.newPage();
 
   const SEARCH_TERM = 'Frontend Developer';
-  const TARGET_JOB = 'Frontend Developer (Remote)';  // exact match you want
+  const TARGET_JOB = 'Frontend Developer (Remote)'; 
 
   console.log('Opening Indeed...');
   await page.goto('https://www.indeed.com/', { waitUntil: 'domcontentloaded' });
@@ -20,12 +20,12 @@ chromium.use(StealthPlugin());
   console.log(`Searching for "${SEARCH_TERM}"...`);
   await page.waitForSelector('input#text-input-what', { state: 'visible' });
   await page.fill('input#text-input-what', SEARCH_TERM);
-  await page.click('button[type="submit"]'); // "Find jobs" button
+  await page.click('button[type="submit"]'); // clicks the submit button 
 
   // Wait for results to load
   await page.waitForTimeout(3000);
 
-  // --- Step 2: Loop on the results page until job appears ---
+  //  Loop on the results page until job appears..
   let jobFound = false;
   while (!jobFound) {
     console.log('Checking results page...');
@@ -36,7 +36,7 @@ chromium.use(StealthPlugin());
       await jobElement.click();
       jobFound = true;
 
-      // --- Step 3: Apply if possible ---
+      // applies if possible ---
       await page.waitForTimeout(3000);
       const applyBtn = '#indeed-apply-widget-form-submit-button';
 
