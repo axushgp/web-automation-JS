@@ -1,5 +1,10 @@
 // WORKS !!! loads up indeed, searches for "frontend developer"job, and then keeps refreshing ONLY the result page (instead of going to homepage)
 
+
+// update -- this opens indeed, searches foor "SEARCH_TERM", then once it finds ""TARGET_JOB"" it clicks on it... then closes the browser abruptly cuz in Indeed, the apply button takes u to another new tab... 
+// So now we need to figure out how to handle multiple tabs in playwright...
+
+
 const { chromium } = require('playwright-extra');
 const StealthPlugin = require('puppeteer-extra-plugin-stealth');
 
@@ -11,7 +16,7 @@ chromium.use(StealthPlugin());
   const page = await browser.newPage();
 
   const SEARCH_TERM = 'Frontend Developer';
-  const TARGET_JOB = 'Frontend Developer (Remote)'; 
+  const TARGET_JOB = 'WordPress Developer'; 
 
   console.log('Opening Indeed...');
   await page.goto('https://www.indeed.com/', { waitUntil: 'domcontentloaded' });
