@@ -5,6 +5,7 @@
   "main": "index.js",
   "scripts": {
     "start": "node examples/puppeteer-example.js",
+    "demo": "node demo.js",
     "example:puppeteer": "node examples/puppeteer-example.js",
     "example:playwright": "node examples/playwright-example.js",
     "install-browsers": "npx playwright install",
