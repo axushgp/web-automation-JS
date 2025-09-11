@@ -8,6 +8,8 @@
 
 // issue - wanna change this searching for targetjob thing to clicking the first job that appears or the one which is more favourable in terms of company, salary etc.....
 
+// currenlty  - working on  handling the new tab after clicking the apply button, logging in using env variables
+
 
 const { chromium } = require('playwright-extra');
 const StealthPlugin = require('puppeteer-extra-plugin-stealth');
