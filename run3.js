@@ -6,6 +6,8 @@
 
 // Also, stealth plugin is working fine, no bot detection yet...
 
+// issue - wanna change this searching for targetjob thing to clicking the first job that appears or the one which is more favourable in terms of company, salary etc.....
+
 
 const { chromium } = require('playwright-extra');
 const StealthPlugin = require('puppeteer-extra-plugin-stealth');
@@ -17,6 +19,7 @@ chromium.use(StealthPlugin());
   const browser = await chromium.launch({ headless: false });
   const page = await browser.newPage();
 
+  // const SEARCH_TERM = 'Frontend Developer';
   const SEARCH_TERM = 'Frontend Developer';
   const TARGET_JOB = 'WordPress Developer'; 
 
